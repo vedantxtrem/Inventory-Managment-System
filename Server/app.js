@@ -13,11 +13,7 @@ Dotenv.config({
 
 const app = express();
 
-
-
 // configuring 
-
-
 
 app.use(express.json());
 
