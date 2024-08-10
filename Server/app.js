@@ -26,6 +26,12 @@ app.use(morgan('dev'));
 app.get('/ping', (_req, res) => {
     res.send('Pong');
 });
+
+// working routes
+import Productrouter from "./routes/product.routes.js";
+
+app.use('/api/v1/product', Productrouter);
+
   
   
 // Default catch all route - 404

@@ -33,3 +33,37 @@ const addProduct = async (req,res,next)=>{
         return next(new AppError(error.message,500));
     }
 }
+
+const deleteProduct = async (req,res,next)=>{
+    try {
+        
+    } catch (error) {
+        
+    }
+}
+
+const getAllProducts = async (req,res,next)=>{
+    try {
+        const product = await Product.find({});
+
+        if(!product){
+            return next(new AppError("unable to fetch product",400));
+        }
+
+        res.status(200).json({
+            success : true,
+            message : "All products",
+            product
+        })  
+    } catch (error) {
+        return next(new AppError(error.message,500));
+    }
+}
+
+
+export {
+    addProduct,
+    deleteProduct,
+    getAllProducts,
+
+}
