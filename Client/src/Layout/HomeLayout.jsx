@@ -2,7 +2,6 @@ import React from 'react'
 import { FiMenu } from "react-icons/fi";
 import { BsBellFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
-import AllProduct from '../component/product/AllProduct';
 
 function HomeLayout({ children }) {
     return (
@@ -51,7 +50,11 @@ function HomeLayout({ children }) {
 
                 {children}
 
-               
+                <footer className="footer footer-center bg-base-300 text-base-content p-4 fixed bottom-0 z-50">
+                    <aside>
+                        <p>Copyright © {new Date().getFullYear()} - All right reserved by IMS Pvt. Ltd</p>
+                    </aside>
+                </footer>
             </div>
         </>
     )
