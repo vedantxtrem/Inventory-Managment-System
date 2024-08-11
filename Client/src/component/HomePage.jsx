@@ -1,6 +1,8 @@
 import React from 'react'
 import HomeLayout from '../Layout/HomeLayout.jsx'
 import assests1 from "../assets/IVM.png"
+import { Link } from 'react-router-dom'
+
 function HomePage() {
   return (
     <HomeLayout>
@@ -27,12 +29,16 @@ function HomePage() {
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                 quasi. In deleniti eaque aut repudiandae et a id nisi.
               </p>
-              <button className="btn btn-primary">All Products</button>
+              <Link to="/getproduct">
+                <button className="btn btn-primary">All Products</button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className='md:w-[50%] flex justify-center items-center'>
-              <img src={assests1} className='w-[65%]' alt="" />
+        <div className='hidden md:block  md:w-[50%] '>
+              <div className='w-full h-full flex justify-center items-center'>
+                <img src={assests1} className='w-[65%]' alt="" />
+              </div>
         </div>
       </div>
 
