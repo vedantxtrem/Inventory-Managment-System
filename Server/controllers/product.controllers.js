@@ -4,14 +4,17 @@ import AppError from "../utils/error.utils.js";
 
 const addProduct = async (req,res,next)=>{
     try {
-        const {name,description,price,inStock} = req.body;
+        const {title,description,price,inStock} = req.body;
 
-        if(!name || !description || !price || !inStock){
+        console.log(title ,description,price,inStock);
+        
+
+        if(!title || !description || !price || !inStock){
             return next(new AppError("All fiels are mandatroy",400));
         }
 
         const product = await Product.create({
-            name,
+            title,
             description,
             price,
             inStock

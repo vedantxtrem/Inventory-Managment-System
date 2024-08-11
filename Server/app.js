@@ -3,11 +3,14 @@ import express from "express";
 import morgan from "morgan";
 import errorMiddleware from "./middleware/error.middleware.js";
 import  Dotenv  from "dotenv";
+import cors from 'cors';
 
 // Load environment variables
 Dotenv.config({
     path: './.env'
 });
+
+
 
 // creating instance 
 
@@ -19,6 +22,13 @@ app.use(express.json());
 
 app.use(morgan('dev'));
 
+
+//cors
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+}))
 
 
 // testing route
