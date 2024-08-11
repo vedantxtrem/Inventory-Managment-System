@@ -3,27 +3,49 @@ import axiosInstance from "../../Helper/axioxInstance.helper";
 import toast from 'react-hot-toast'
 
 const initialState = {
-    productData: []
+    productData: [],
+    loading: false,
+    error: null,
 }
 
 export const getAllProduct = createAsyncThunk("product/get", async () => {
     try {
-        const response = axiosInstance.get("/product");
+        const response = await axiosInstance.get("/product");
 
         toast.promise(response, {
-            loading: "loading course data...",
-            success: "Courses loaded successfully",
-            error: "Failed to get the courses",
-        })
+            loading: "Loading product data...",
+            success: "Products loaded successfully",
+            error: "Failed to get the products",
+        });
 
-        return (await response).data.product;
+        return response.data.product;
     } catch (error) {
-        toast.error(error?.response?.data?.message);
+        toast.error(error?.response?.data?.message || "An error occurred");
+        throw error;
     }
-})
+});
 
-export const addProducdt = createAsyncThunk("addProudct", (data) => {
+export const addProduct = createAsyncThunk("product/add", async (data) => {
+    try {
+        let formData = new FormData();
+        formData.append("title", data?.title);
+        formData.append("description", data?.description);
+        formData.append("price", data?.price);
+        formData.append("inStock", data?.inStock);
 
+
+        const response = await axiosInstance.post("/product", formData);
+        toast.promise(response, {
+            loading: "Creating new product...",
+            success: "Product added successfully",
+            error: "Failed to create product",
+        });
+
+        return response.data;
+    } catch (error) {
+        toast.error(error?.response?.data?.message || "An error occurred");
+        throw error;
+    }
 });
 
 const productSlice = createSlice({
@@ -31,8 +53,15 @@ const productSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-
-    }
-})
+        builder
+            .addCase(getAllProduct.fulfilled, (state, action) => {
+                if(action.payload) {
+                    console.log(action.payload);
+                    state.productData = [...action.payload];
+                }
+                
+            })
+    },
+});
 
 export default productSlice.reducer;
