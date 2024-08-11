@@ -26,8 +26,7 @@ function HomePage() {
                 Hello there !
               </h1>
               <p className="py-6 ">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                It's Inventory managment System. Here we create a Product and list it & also update the  stock and price and delete operation.
               </p>
               <Link to="/getproduct">
                 <button className="btn btn-primary">All Products</button>
