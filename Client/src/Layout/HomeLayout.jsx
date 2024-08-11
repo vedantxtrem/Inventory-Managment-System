@@ -2,6 +2,7 @@ import React from 'react'
 import { FiMenu } from "react-icons/fi";
 import { BsBellFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import AllProduct from '../component/product/AllProduct';
 
 function HomeLayout({ children }) {
     return (
@@ -50,8 +51,7 @@ function HomeLayout({ children }) {
 
                 {children}
 
-
-
+               
             </div>
         </>
     )

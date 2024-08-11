@@ -22,11 +22,12 @@ function Card({ data }) {
 
 
     return (
-        <div className="card bg-primary text-primary-content w-96">
+        <div className="card bg-primary text-primary-content  w-[25rem] h-[200px] ">
             <div className="card-body">
                 <h2 className="card-title"> {data?.title} </h2>
                 <MdDelete onClick={() => onProductDelete(data?._id)} className='absolute top-4 right-3 text-xl' />
-                <p> {data?.description} </p>
+
+                <p className='text-left overflow-hidden'> {data?.description} </p>
 
                 <div className="card-actions w-full flex justify-around">
                     <button className="btn"> Quantity :  {data?.inStock} </button>

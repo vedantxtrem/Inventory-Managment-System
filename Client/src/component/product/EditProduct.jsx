@@ -3,6 +3,7 @@ import { editProduct, getAllProduct } from '../../Redux/Slice/Product.Slice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast'; // Ensure this is imported
+import { RxCross2 } from "react-icons/rx";
 
 function EditProduct({ isOpen, onClose, currData }) {
     const dispatch = useDispatch();
@@ -73,8 +74,9 @@ function EditProduct({ isOpen, onClose, currData }) {
     if (!isOpen) return null;
 
     return (
-        <div className='w-fit p-4 flex flex-col justify-center rounded-lg shadow-[0_0_10px_gray] relative'>
-            <div className='w-[50%] flex justify-center'>
+        <div className='w-fit p-4 pt-10 flex flex-col justify-center rounded-lg shadow-[0_0_10px_gray] absolute z-30 bg-base-100 left-16 md:left-44  top-40 '>
+            <RxCross2 onClick={onClose} className='absolute top-3 right-5 text-xl' />
+            <div className=' flex justify-center'>
                 <form onSubmit={onFormSubmit} noValidate className='flex flex-col justify-center'>
                     <label className="input input-bordered flex items-center gap-2 mb-3">
                         Price:
