@@ -22,8 +22,8 @@ function AllProduct () {
 
     return (
         <HomeLayout>
-            <div className="min-h-screen pt-12 flex flex-col gap-10">
-                <h1 className="text-center text-3xl font-semibold mt-20 mb-4">
+            <div className="min-h-screen pt-12 flex flex-col gap-10 p-4">
+                <h1 className="text-center text-3xl font-semibold mt-20 mb-4 p-2">
                     Explore the Product
                     <span className="font-bold text-yellow-500">
                         {" "}Inventory Management System
