@@ -5,6 +5,7 @@ import errorMiddleware from "./middleware/error.middleware.js";
 import  Dotenv  from "dotenv";
 import cors from 'cors';
 
+
 // Load environment variables
 Dotenv.config({
     path: './.env'
@@ -25,7 +26,7 @@ app.use(morgan('dev'));
 
 //cors
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [process.env.FRONTEND_URL],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 }))
