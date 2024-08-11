@@ -41,7 +41,7 @@ function HomeLayout({ children }) {
                     <div className="navbar-end md:mr-5">
                         <button className="btn btn-ghost btn-circle">
                             <div className="indicator w-4 h-5 md:w-5 md:h-7">
-                                <BsBellFill className='w-full h-full animate-bounce' />
+                                <BsBellFill className='w-full h-full animate-pulse' />
                             </div>
                         </button>
                     </div>
