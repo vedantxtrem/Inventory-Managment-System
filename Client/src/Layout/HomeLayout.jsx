@@ -29,14 +29,14 @@ function HomeLayout({ children }) {
                                     <Link to="/addproduct" >Add Product</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" >About</Link>
+                                    <Link to="/" >About</Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="  navbar-center">
-                        <a className="btn btn-ghost text-sm  md:text-xl "> Inventory Managment System </a>
+                        <Link to="/" className="btn btn-ghost text-sm  md:text-xl "> Inventory Managment System </Link>
                     </div>
 
                     <div className="navbar-end md:mr-5">
