@@ -30,15 +30,10 @@ export const getAllProduct = createAsyncThunk("product/get", async () => {
 });
 
 // Async thunk to add a new product
-export const addProduct = createAsyncThunk("product/add", async (data, { rejectWithValue }) => {
+export const addProduct = createAsyncThunk("product/add", async (data) => {
     try {
-        let formData = new FormData();
-        formData.append("title", data?.title);
-        formData.append("description", data?.description);
-        formData.append("price", data?.price);
-        formData.append("inStock", data?.inStock);
 
-        const response = await axiosInstance.post("/product", formData);
+        const response = axiosInstance.post("/product",data);
         
         // Show toast notifications
         toast.promise(response, {
@@ -47,18 +42,19 @@ export const addProduct = createAsyncThunk("product/add", async (data, { rejectW
             error: "Failed to create product",
         });
 
-        return response.data;
+        return (await response).data ;
+        
     } catch (error) {
         // Handle error and show a toast
         const errorMessage = error?.response?.data?.message || "An error occurred";
         toast.error(errorMessage);
-        return rejectWithValue(errorMessage);
+        toast.error(error?.response?.data?.message);
     }
 });
 
 export const deleteProduct = createAsyncThunk("/deleteProduct" , async(id)=>{
     try {
-        const response = axiosInstance.delete(`product/${id}`)
+        const response = axiosInstance.delete(`/product/${id}`)
         toast.promise(response, {
             loading: "deleting course ...",
             success: "Courses deleted successfully",
@@ -70,6 +66,20 @@ export const deleteProduct = createAsyncThunk("/deleteProduct" , async(id)=>{
         toast.error(error?.response?.data?.message);
     }
 })
+
+export const editProduct = createAsyncThunk(
+    'product/editProduct',
+    async (data) => {
+        try {
+            const response = await axiosInstance.put(`/product/${data.id}`, data);
+            toast.success("Product updated successfully");
+            return response.data;
+        } catch (error) {
+            const errorMessage = error?.response?.data?.message || "Failed to update product";
+            toast.error(errorMessage);
+        }
+    }
+);
 
 // Product slice
 const productSlice = createSlice({
@@ -91,6 +101,7 @@ const productSlice = createSlice({
                 state.loading = false;
                 state.error = action.payload;
             })
+            
     }
 
 });
