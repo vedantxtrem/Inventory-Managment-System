@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <HomeLayout>
 
-      <div className='h-[90vh] w-[90%] min-h-screen flex' >
+      <div className='h-[90vh] w-[90%] min-h-screen flex overflow-y-scroll ' >
         <div className="hero bg-base-100 md:w-[50%]">
           <div className="hero-content text-center">
             <div className="max-w-md">
