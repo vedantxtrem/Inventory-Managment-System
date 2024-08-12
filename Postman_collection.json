@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "cc105446-04be-47f5-ad18-e1a414efaca3",
+		"name": "Iventory Manegment System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31899395",
+		"_collection_link": "https://planetary-comet-587892.postman.co/workspace/3891576f-3d70-4b18-8703-9d6803100753/collection/31899395-cc105446-04be-47f5-ad18-e1a414efaca3?action=share&source=collection_link&creator=31899395"
+	},
+	"item": [
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"vivo v10\",\n    \"description\": \"moblie vivo v 10\",\n    \"price\": \"9999\",\n    \"inStock\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ims-1urn.onrender.com/api/v1/product",
+					"protocol": "https",
+					"host": [
+						"ims-1urn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ims-1urn.onrender.com/api/v1/product",
+					"protocol": "https",
+					"host": [
+						"ims-1urn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update  product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": \"1000\",\n    \"inStock\": \"38\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ims-1urn.onrender.com/api/v1/product/66b8fba001f70da44e1da05c",
+					"protocol": "https",
+					"host": [
+						"ims-1urn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"66b8fba001f70da44e1da05c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ims-1urn.onrender.com/api/v1/product/66b8fba001f70da44e1da05c",
+					"protocol": "https",
+					"host": [
+						"ims-1urn",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"66b8fba001f70da44e1da05c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

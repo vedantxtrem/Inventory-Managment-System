@@ -74,7 +74,7 @@ function EditProduct({ isOpen, onClose, currData }) {
     if (!isOpen) return null;
 
     return (
-        <div className='w-fit p-4 pt-10 flex flex-col justify-center rounded-lg shadow-[0_0_10px_gray] absolute z-30 bg-base-100 left-16 md:left-44  top-40 '>
+        <div className='w-fit p-4 pt-10 flex flex-col justify-center rounded-lg shadow-[0_0_10px_gray] absolute z-50 bg-base-100 left-16 md:left-44  top-40 '>
             <RxCross2 onClick={onClose} className='absolute top-3 right-5 text-xl' />
             <div className=' flex justify-center'>
                 <form onSubmit={onFormSubmit} noValidate className='flex flex-col justify-center'>

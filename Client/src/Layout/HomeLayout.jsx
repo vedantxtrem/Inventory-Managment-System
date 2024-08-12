@@ -50,7 +50,7 @@ function HomeLayout({ children }) {
 
                 {children}
 
-                <footer className="footer footer-center bg-base-300 text-base-content p-4 fixed bottom-0 z-50">
+                <footer className="footer footer-center bg-base-300 text-base-content p-4 fixed bottom-0 z-40">
                     <aside>
                         <p>Copyright © {new Date().getFullYear()} - All right reserved by IMS Pvt. Ltd</p>
                     </aside>

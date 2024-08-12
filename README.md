@@ -24,6 +24,9 @@ Welcome to the Inventory Management System! This application allows you to manag
 - **Updating Products**: Select a product from the list to edit its details like price and stock quantity.
 - **Deleting Products**: Remove products from the list by using the delete option next to each product.
 
+## Links
 
-<!-- ![Placeholder for Application Image]("") -->
-
+- **Frontend:** [https://ims-frontend-ou0i.onrender.com/](https://ims-frontend-ou0i.onrender.com/)
+- **Backend:** [https://ims-1urn.onrender.com/api/v1/](https://ims-1urn.onrender.com/api/v1/)
+- **GitHub:** [https://github.com/vedantxtrem/Inventory-Managment-System](https://github.com/vedantxtrem/Inventory-Managment-System)
+- **Postman Collection:** [https://planetary-comet-587892.postman.co/workspace/New-Team-Workspace~3891576f-3d70-4b18-8703-9d6803100753/collection/31899395-cc105446-04be-47f5-ad18-e1a414efaca3?action=share&creator=31899395](https://planetary-comet-587892.postman.co/workspace/New-Team-Workspace~3891576f-3d70-4b18-8703-9d6803100753/collection/31899395-cc105446-04be-47f5-ad18-e1a414efaca3?action=share&creator=31899395)
