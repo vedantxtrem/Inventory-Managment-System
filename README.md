@@ -30,3 +30,5 @@ Welcome to the Inventory Management System! This application allows you to manag
 - **Backend:** [https://ims-1urn.onrender.com/api/v1/](https://ims-1urn.onrender.com/api/v1/)
 - **GitHub:** [https://github.com/vedantxtrem/Inventory-Managment-System](https://github.com/vedantxtrem/Inventory-Managment-System)
 - **Postman Collection:** [https://planetary-comet-587892.postman.co/workspace/New-Team-Workspace~3891576f-3d70-4b18-8703-9d6803100753/collection/31899395-cc105446-04be-47f5-ad18-e1a414efaca3?action=share&creator=31899395](https://planetary-comet-587892.postman.co/workspace/New-Team-Workspace~3891576f-3d70-4b18-8703-9d6803100753/collection/31899395-cc105446-04be-47f5-ad18-e1a414efaca3?action=share&creator=31899395)
+
+- **(Note)** : The server may take up to 1 minute to start when you make a network request on the web.
