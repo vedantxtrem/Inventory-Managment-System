@@ -12,7 +12,7 @@ function Card({ data }) {
 
 
     async function onProductDelete(id) {
-        if (window.confirm("Are you sure you want to delete the course?")) {
+        if (window.confirm("Are you sure you want to delete the product?")) {
             const res = await dispatch(deleteProduct(id));
             if (res?.payload?.success) {
                 await dispatch(getAllProduct());
